@@ -15,9 +15,9 @@ public class Junit {
 		@Test
 		public void fname() {
 			try {
-				assertTrue(Regex.firstname("iva"));
+				assertTrue("invalid first name",Regex.firstname("iva"));
 			}catch(AssertionError e) {
-				System.out.println("invalid name");
+				System.out.println(e.getMessage());
 			}
 			
 		}
@@ -27,9 +27,9 @@ public class Junit {
 		@Test
 		public void lname() {
 			try {
-				assertTrue(Regex.lastname("Karthi"));
+				assertTrue("Invalid last name",Regex.lastname("Karthi"));
 			}catch(AssertionError e) {
-				System.out.println("invalid last name");
+				System.out.println(e.getMessage());
 			}
 			
 		}
@@ -39,9 +39,9 @@ public class Junit {
 		@Test
 		public void pass() {
 			try {
-				assertTrue(Regex.password("asdfghjkS"));
+				assertTrue("Invalid password",Regex.password("asdfghjkS"));
 			}catch(AssertionError e) {
-				System.out.println("invalid password");
+				System.out.println(e.getMessage());
 			}
 			
 		}
@@ -51,9 +51,9 @@ public class Junit {
 		@Test
 		public void email() {
 			try {
-				assertTrue(Regex.email("karthikeyan26@gmail.com"));
+				assertTrue("Invalid email",Regex.email("karthikeyan26"));
 			}catch(AssertionError e) {
-				System.out.println("invalid email");
+				System.out.println(e.getMessage());
 			}
 			
 		}
